@@ -1,0 +1,512 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BBBD1A37-1F8F-4B74-8B88-0E4CEC845DBF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JLG</RootNamespace>
+    <AssemblyName>JLG</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bootstrap\css\bootstrap-custom.css" />
+    <Content Include="bootstrap\css\bootstrap-multiselect.css" />
+    <Content Include="bootstrap\css\bootstrap.css" />
+    <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrap\css\plugins\morris.css" />
+    <Content Include="bootstrap\css\sb-admin.css" />
+    <Content Include="bootstrap\font-awesome-4.1.0\css\font-awesome.css" />
+    <Content Include="bootstrap\font-awesome-4.1.0\css\font-awesome.min.css" />
+    <Content Include="bootstrap\font-awesome-4.1.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bootstrap\js\bootstrap-multiselect.js" />
+    <Content Include="bootstrap\js\bootstrap.js" />
+    <Content Include="bootstrap\js\bootstrap.min.js" />
+    <Content Include="bootstrap\js\jquery-1.11.0.js" />
+    <Content Include="bootstrap\js\plugins\flot\excanvas.min.js" />
+    <Content Include="bootstrap\js\plugins\flot\flot-data.js" />
+    <Content Include="bootstrap\js\plugins\flot\jquery.flot.js" />
+    <Content Include="bootstrap\js\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="bootstrap\js\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="bootstrap\js\plugins\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="bootstrap\js\plugins\morris\morris-data.js" />
+    <Content Include="bootstrap\js\plugins\morris\morris.js" />
+    <Content Include="bootstrap\js\plugins\morris\morris.min.js" />
+    <Content Include="bootstrap\js\plugins\morris\raphael.min.js" />
+    <Content Include="Forms\frmAboutUs.aspx" />
+    <Content Include="Forms\frmArchivalDataUpload.aspx" />
+    <Content Include="Forms\frmArchivalProcess.aspx" />
+    <Content Include="Forms\frmBCMailList.aspx" />
+    <Content Include="Forms\frmBranchMaster.aspx" />
+    <Content Include="Forms\frmChangePassword.aspx" />
+    <Content Include="Forms\frmCreateBC.aspx" />
+    <Content Include="Forms\frmDashboardReport.aspx" />
+    <Content Include="Forms\frmDataSynchronization.aspx" />
+    <Content Include="Forms\frmDeleteDataByBarcode.aspx" />
+    <Content Include="Forms\frmDVUReport.aspx" />
+    <Content Include="Forms\frmFileInward.aspx" />
+    <Content Include="Forms\frmGetMailList.aspx" />
+    <Content Include="Forms\frmGroupMaster.aspx" />
+    <Content Include="Forms\frmHome.aspx" />
+    <Content Include="Forms\frmImage_SearchView.aspx" />
+    <Content Include="Forms\frmInwardReport.aspx" />
+    <Content Include="Forms\frmLocationMaster.aspx" />
+    <Content Include="Forms\frmParentChildSheet.aspx" />
+    <Content Include="Forms\frmPurgeMISReport.aspx" />
+    <Content Include="Forms\frmMISReport.aspx" />
+    <Content Include="Forms\frmPDDVerification.aspx" />
+    <Content Include="Forms\frmPDD_DataUpload.aspx" />
+    <Content Include="Forms\frmProfilePage.aspx" />
+    <Content Include="Forms\frmPurgingImgData.aspx" />
+    <Content Include="Forms\frmReasonMaster.aspx" />
+    <Content Include="Forms\frmRejectionReprocess.aspx" />
+    <Content Include="Forms\frmUserMaster.aspx" />
+    <Content Include="Forms\frmWIMSInwardReport.aspx" />
+    <Content Include="Forms\ViewImg.aspx" />
+    <Content Include="frmLogin.aspx" />
+    <Content Include="Images\calender.jpg" />
+    <Content Include="Images\ico_signout.png" />
+    <Content Include="Images\ico_user.gif" />
+    <Content Include="Images\imagenotfound.jpeg" />
+    <Content Include="Images\img1.png" />
+    <Content Include="Images\Icon.png" />
+    <Content Include="Images\LeftRotate.png" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\loginbg.jpg" />
+    <Content Include="Images\logo_writer.jpg" />
+    <Content Include="Images\logo_writer_new.png" />
+    <Content Include="Images\Refresh.png" />
+    <Content Include="Images\RightRotate.png" />
+    <Content Include="Images\ToolTip.png" />
+    <Content Include="Images\UI_dataentry.png" />
+    <Content Include="Images\ZoomIn.png" />
+    <Content Include="Images\ZoomOut.png" />
+    <Content Include="ref\Leadtools.Codecs.Cmp.dll" />
+    <Content Include="ref\Leadtools.Codecs.dll" />
+    <Content Include="ref\Leadtools.Codecs.Gif.dll" />
+    <Content Include="ref\Leadtools.Codecs.J2k.dll" />
+    <Content Include="ref\Leadtools.Codecs.Jbg.dll" />
+    <Content Include="ref\Leadtools.Codecs.Png.dll" />
+    <Content Include="ref\Leadtools.Codecs.Tif.dll" />
+    <Content Include="ref\Leadtools.ColorConversion.dll" />
+    <Content Include="ref\Leadtools.dll" />
+    <Content Include="ref\Leadtools.Drawing.dll" />
+    <Content Include="ref\Leadtools.Forms.DocumentWriters.dll" />
+    <Content Include="ref\Leadtools.Forms.Ocr.dll" />
+    <Content Include="ref\Leadtools.ImageProcessing.Color.dll" />
+    <Content Include="ref\Leadtools.Pdf.dll" />
+    <Content Include="ref\Leadtools.Web.dll" />
+    <Content Include="Scripts\jquery-1.12.4.js" />
+    <Content Include="Scripts\jquery-latest.pack_Viewer.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery.csstransform.1.0.pack_Viewer.js" />
+    <Content Include="Scripts\jquery.easing.1.3_Viewer.js" />
+    <Content Include="Scripts\jquery.min_1.8.3.js" />
+    <Content Include="Scripts\jquery_Viewer.js" />
+    <Content Include="Services\CommonData.asmx" />
+    <Content Include="Styles\jquery-ui.css" />
+    <Content Include="Styles\SignInStyle.css" />
+    <Content Include="Styles\StyleSheet.css" />
+    <Content Include="Templates\LoginCredential.htm" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Code\ClsUploadData.cs" />
+    <Compile Include="App_Code\CommonData.cs" />
+    <Compile Include="App_Code\CommonDB.cs" />
+    <Compile Include="App_Code\TIF.cs" />
+    <Compile Include="Forms\frmAboutUs.aspx.cs">
+      <DependentUpon>frmAboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAboutUs.aspx.designer.cs">
+      <DependentUpon>frmAboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmArchivalDataUpload.aspx.cs">
+      <DependentUpon>frmArchivalDataUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmArchivalDataUpload.aspx.designer.cs">
+      <DependentUpon>frmArchivalDataUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmArchivalProcess.aspx.cs">
+      <DependentUpon>frmArchivalProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmArchivalProcess.aspx.designer.cs">
+      <DependentUpon>frmArchivalProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBCMailList.aspx.cs">
+      <DependentUpon>frmBCMailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBCMailList.aspx.designer.cs">
+      <DependentUpon>frmBCMailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBranchMaster.aspx.cs">
+      <DependentUpon>frmBranchMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBranchMaster.aspx.designer.cs">
+      <DependentUpon>frmBranchMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmChangePassword.aspx.cs">
+      <DependentUpon>frmChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChangePassword.aspx.designer.cs">
+      <DependentUpon>frmChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCreateBC.aspx.cs">
+      <DependentUpon>frmCreateBC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCreateBC.aspx.designer.cs">
+      <DependentUpon>frmCreateBC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDashboardReport.aspx.cs">
+      <DependentUpon>frmDashboardReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDashboardReport.aspx.designer.cs">
+      <DependentUpon>frmDashboardReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDataSynchronization.aspx.cs">
+      <DependentUpon>frmDataSynchronization.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDataSynchronization.aspx.designer.cs">
+      <DependentUpon>frmDataSynchronization.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDeleteDataByBarcode.aspx.cs">
+      <DependentUpon>frmDeleteDataByBarcode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDeleteDataByBarcode.aspx.designer.cs">
+      <DependentUpon>frmDeleteDataByBarcode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDVUReport.aspx.cs">
+      <DependentUpon>frmDVUReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDVUReport.aspx.designer.cs">
+      <DependentUpon>frmDVUReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFileInward.aspx.cs">
+      <DependentUpon>frmFileInward.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFileInward.aspx.designer.cs">
+      <DependentUpon>frmFileInward.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGetMailList.aspx.cs">
+      <DependentUpon>frmGetMailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGetMailList.aspx.designer.cs">
+      <DependentUpon>frmGetMailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGroupMaster.aspx.cs">
+      <DependentUpon>frmGroupMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGroupMaster.aspx.designer.cs">
+      <DependentUpon>frmGroupMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHome.aspx.cs">
+      <DependentUpon>frmHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHome.aspx.designer.cs">
+      <DependentUpon>frmHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmImage_SearchView.aspx.cs">
+      <DependentUpon>frmImage_SearchView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmImage_SearchView.aspx.designer.cs">
+      <DependentUpon>frmImage_SearchView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInwardReport.aspx.cs">
+      <DependentUpon>frmInwardReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInwardReport.aspx.designer.cs">
+      <DependentUpon>frmInwardReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLocationMaster.aspx.cs">
+      <DependentUpon>frmLocationMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLocationMaster.aspx.designer.cs">
+      <DependentUpon>frmLocationMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmParentChildSheet.aspx.cs">
+      <DependentUpon>frmParentChildSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmParentChildSheet.aspx.designer.cs">
+      <DependentUpon>frmParentChildSheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPurgeMISReport.aspx.cs">
+      <DependentUpon>frmPurgeMISReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPurgeMISReport.aspx.designer.cs">
+      <DependentUpon>frmPurgeMISReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMISReport.aspx.cs">
+      <DependentUpon>frmMISReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMISReport.aspx.designer.cs">
+      <DependentUpon>frmMISReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPDDVerification.aspx.cs">
+      <DependentUpon>frmPDDVerification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPDDVerification.aspx.designer.cs">
+      <DependentUpon>frmPDDVerification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPDD_DataUpload.aspx.cs">
+      <DependentUpon>frmPDD_DataUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPDD_DataUpload.aspx.designer.cs">
+      <DependentUpon>frmPDD_DataUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProfilePage.aspx.cs">
+      <DependentUpon>frmProfilePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProfilePage.aspx.designer.cs">
+      <DependentUpon>frmProfilePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPurgingImgData.aspx.cs">
+      <DependentUpon>frmPurgingImgData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPurgingImgData.aspx.designer.cs">
+      <DependentUpon>frmPurgingImgData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReasonMaster.aspx.cs">
+      <DependentUpon>frmReasonMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReasonMaster.aspx.designer.cs">
+      <DependentUpon>frmReasonMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRejectionReprocess.aspx.cs">
+      <DependentUpon>frmRejectionReprocess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRejectionReprocess.aspx.designer.cs">
+      <DependentUpon>frmRejectionReprocess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUserMaster.aspx.cs">
+      <DependentUpon>frmUserMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUserMaster.aspx.designer.cs">
+      <DependentUpon>frmUserMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmWIMSInwardReport.aspx.cs">
+      <DependentUpon>frmWIMSInwardReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmWIMSInwardReport.aspx.designer.cs">
+      <DependentUpon>frmWIMSInwardReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewImg.aspx.cs">
+      <DependentUpon>ViewImg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewImg.aspx.designer.cs">
+      <DependentUpon>ViewImg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.aspx.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmLogin.aspx.designer.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\JLG_Master.Master.cs">
+      <DependentUpon>JLG_Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Masters\JLG_Master.Master.designer.cs">
+      <DependentUpon>JLG_Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClsPDDData.cs" />
+    <Compile Include="Models\ClsUser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CommonData.asmx.cs">
+      <DependentUpon>CommonData.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\GenericHandler.ashx.cs">
+      <DependentUpon>GenericHandler.ashx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bootstrap\font-awesome-4.1.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="bootstrap\font-awesome-4.1.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="bootstrap\font-awesome-4.1.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="bootstrap\font-awesome-4.1.0\fonts\FontAwesome.otf" />
+    <Content Include="bootstrap\font-awesome-4.1.0\less\bordered-pulled.less" />
+    <Content Include="bootstrap\font-awesome-4.1.0\less\core.less" />
+    <Content Include="bootstrap\font-awesome-4.1.0\less\fixed-width.less" />
+    <Content Include="bootstrap\font-awesome-4.1.0\less\font-awesome.less" />
+    <Content Include="bootstrap\font-awesome-4.1.0\less\icons.less" />
+    <Content Include="bootstrap\font-awesome-4.1.0\less\larger.less" />
+    <Content Include="bootstrap\font-awesome-4.1.0\less\list.less" />
+    <Content Include="bootstrap\font-awesome-4.1.0\less\mixins.less" />
+    <Content Include="bootstrap\font-awesome-4.1.0\less\path.less" />
+    <Content Include="bootstrap\font-awesome-4.1.0\less\rotated-flipped.less" />
+    <Content Include="bootstrap\font-awesome-4.1.0\less\spinning.less" />
+    <Content Include="bootstrap\font-awesome-4.1.0\less\stacked.less" />
+    <Content Include="bootstrap\font-awesome-4.1.0\less\variables.less" />
+    <Content Include="bootstrap\font-awesome-4.1.0\scss\font-awesome.scss" />
+    <Content Include="bootstrap\font-awesome-4.1.0\scss\_bordered-pulled.scss" />
+    <Content Include="bootstrap\font-awesome-4.1.0\scss\_core.scss" />
+    <Content Include="bootstrap\font-awesome-4.1.0\scss\_fixed-width.scss" />
+    <Content Include="bootstrap\font-awesome-4.1.0\scss\_icons.scss" />
+    <Content Include="bootstrap\font-awesome-4.1.0\scss\_larger.scss" />
+    <Content Include="bootstrap\font-awesome-4.1.0\scss\_list.scss" />
+    <Content Include="bootstrap\font-awesome-4.1.0\scss\_mixins.scss" />
+    <Content Include="bootstrap\font-awesome-4.1.0\scss\_path.scss" />
+    <Content Include="bootstrap\font-awesome-4.1.0\scss\_rotated-flipped.scss" />
+    <Content Include="bootstrap\font-awesome-4.1.0\scss\_spinning.scss" />
+    <Content Include="bootstrap\font-awesome-4.1.0\scss\_stacked.scss" />
+    <Content Include="bootstrap\font-awesome-4.1.0\scss\_variables.scss" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Masters\JLG_Master.Master" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <Content Include="Services\GenericHandler.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Upload\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1093</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2095/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <servers defaultServer="">
+            <server name="SelfHostServer" exePath="" cmdArgs="" url="http://localhost:1094/" workingDir="" />
+          </servers>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="JLG_Master.master.cs" Inherits="JLG.Masters.JLG_Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>JLG Process</title>
+    <link rel="stylesheet" href="../Styles/StyleSheet.css" type="text/css" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" type="text/css" />
+
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            document.addEventListener("contextmenu", function (e) {
+                e.preventDefault();
+            }, false);
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container-fluid" style="padding-left: 2%; padding-right: 2%;">
+            <div class="row bottomborder">
+                <div class="col-md-2" style="float: left; padding-right: 1%;">
+                    <!--   <a class="navbar-brand" href="main.php">  </a>-->
+                    <img src="../images/logo_writer.jpg" class="img-responsive" alt="Writer" width="180" height="80">
+                </div>
+                <div class="col-md-10" style="padding-top: 1%; height: 11%;">
+                    <div class="col-md-9" style="text-align: left; float: left;">
+                        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" RenderingMode="List"
+                            IncludeStyleBlock="false" StaticMenuStyle-CssClass="nav_1">
+                        </asp:Menu>
+                    </div>
+                    <div class="col-md-3" style="text-align: right; float: right">
+                        <h5><b>Logged in as</b>&nbsp; 
+                        <img src="../images/ico_user.gif" />
+                            <asp:Label ID="lblUserName" runat="server" Font-Bold="true"></asp:Label>
+                            </br><img src="../images/ico_signout.png" />
+                            <b><a href='../frmLogin.aspx' target='_top'>Log out</a></b>
+                            <%-- !&nbsp; <a href="../frmLogin.aspx">
+                                <button type="button" class="btn btn-danger">
+                                    <span class="glyphicon glyphicon-log-out"></span>Log out</button>
+                            </a>--%>
+                            <%--<asp:Label ID="TodayDate" runat="server"></asp:Label>--%>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
