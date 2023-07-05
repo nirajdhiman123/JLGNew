@@ -15,6 +15,7 @@ namespace JLG
             try
             {
                 //niraj
+                //manoj
                 ClsUser objuser = new ClsUser();
                 objuser = (ClsUser)Session["objUser"];
 
