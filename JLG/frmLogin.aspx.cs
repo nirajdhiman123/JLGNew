@@ -17,6 +17,7 @@ namespace JLG
                 //niraj
                 //manoj
                 //Azure
+                //Check fo CI
                 ClsUser objuser = new ClsUser();
                 objuser = (ClsUser)Session["objUser"];
 
