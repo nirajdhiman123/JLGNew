@@ -16,6 +16,7 @@ namespace JLG
             {
                 //niraj
                 //manoj
+                //Azure
                 ClsUser objuser = new ClsUser();
                 objuser = (ClsUser)Session["objUser"];
 
